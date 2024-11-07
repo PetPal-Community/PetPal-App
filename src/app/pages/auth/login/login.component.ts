@@ -26,6 +26,8 @@ export class LoginComponent {
   private router = inject(Router);
   private snackBar = inject(MatSnackBar);
 
+  // CAMBIAR RUTAS
+  
   private readonly CUSTOMER_ROLE = 'CUSTOMER';
   private readonly AUTHOR_ROLE = 'AUTHOR';
   private readonly CUSTOMER_ROUTE = '/customer/catalog';

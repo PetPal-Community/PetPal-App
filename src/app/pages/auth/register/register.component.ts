@@ -69,15 +69,15 @@ export class RegisterComponent {
 
       } else if (this.registerForm.value.tipo == "cuidador") {
 
-        // this.authService.registerCarer(userData).subscribe({
-        //   next: (response)=>{
-        //     this.showSnackBar("Usuario creado correctamente");
-        //     this.router.navigate(['auth/login']);
-        //   }, 
-        //   error: (err) => {
-        //       this.showSnackBar(err.error.message);
-        //   },
-        // });
+        this.authService.registerCarer(userData).subscribe({
+          next: (response)=>{
+            this.showSnackBar("Usuario creado correctamente");
+            this.router.navigate(['auth/login']);
+          }, 
+          error: (err) => {
+              this.showSnackBar(err.error.message);
+          },
+        });
 
       }
 

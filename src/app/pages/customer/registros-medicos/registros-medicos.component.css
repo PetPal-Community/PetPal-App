@@ -1,0 +1,64 @@
+/* Estilo para el contenedor principal */
+.registrosmedicos-container {
+    display: flex;
+    flex-direction: column;
+    /* Organiza los elementos en columna */
+    align-items: center;
+    /* Centra los elementos horizontalmente */
+    height: 80vh;
+    padding: 20px;
+    background-color: #f0f0f0;
+    /* Fondo claro */
+}
+
+/* Estilo para el título */
+.titulo h2 {
+    margin-bottom: 20px;
+    /* Espacio entre el título y la caja */
+    color: #333;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Estilo para la caja con bordes redondeados */
+.registrosmedicos-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra para profundidad */
+    width: 90%;
+    /* Ancho fijo */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+/* Estilo para el contenido dentro de la caja */
+.registrosmedicos-card h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.registrosmedicos-card p {
+    color: #666;
+}
+
+/* Estilo para el enlace */
+.link {
+    position: absolute;
+    bottom: 10px;
+    /* Ubica el enlace en la parte inferior */
+    right: 10px;
+    /* Ubica el enlace en la parte derecha */
+    color: #007bff;
+    /* Color azul */
+    text-decoration: none;
+    font-size: 50px;
+}
+
+.link:hover {
+    text-decoration: underline;
+    /* Efecto hover */
+}

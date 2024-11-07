@@ -30,7 +30,7 @@ export class LoginComponent {
   
   private readonly CUSTOMER_ROLE = 'CUSTOMER';
   private readonly AUTHOR_ROLE = 'AUTHOR';
-  private readonly CUSTOMER_ROUTE = '/customer/catalog';
+  private readonly CUSTOMER_ROUTE = '/customer/recordatorios';
   private readonly AUTHOR_ROUTE = '/author/books/list';
   private readonly DEFAULT_ROUTE = '/home';
 

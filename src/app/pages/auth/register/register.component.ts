@@ -37,7 +37,7 @@ export class RegisterComponent {
       apellido: ['', [Validators.required]],
       telefono: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      contrasena: ['', [Validators.required]],
+      contrasena: ['', [Validators.required, Validators.minLength(8)]],
       tipo: this.floatLabelControl
     })
   }

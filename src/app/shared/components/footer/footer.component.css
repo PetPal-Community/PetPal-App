@@ -1,0 +1,52 @@
+/* Estilos para el Footer */
+.redes-sociales {
+    background-color: #BF815E; /* Fondo con el color que proporcionaste */
+    padding: 20px 0; /* Espaciado vertical */
+    text-align: center;
+}
+
+.redes-sociales .contenedor-redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre los íconos */
+    margin-bottom: 20px; /* Espacio entre los íconos y el texto */
+}
+
+.redes-sociales a {
+    color: #fff; /* Color de los íconos */
+    text-align: center;
+    width: 100px; /* Ancho fijo para los enlaces */
+    display: block;
+    padding: 10px 0;
+    border-radius: 10px;
+    font-size: 20px; /* Tamaño ajustado de los íconos */
+    background-color: rgb(106, 124, 124); /* Color de fondo por defecto */
+    margin: 0 15px; /* Espaciado horizontal entre los íconos */
+    text-decoration: none; /* Eliminar subrayado */
+}
+
+.redes-sociales .fb:hover {
+    background-color: #121CFF; /* Color al pasar el cursor por el icono de Facebook */
+}
+
+.redes-sociales .x:hover {
+    background-color: #1F1717; /* Color al pasar el cursor por el icono de Twitter */
+}
+
+.redes-sociales .gh:hover {
+    background-color: #030303; /* Color al pasar el cursor por el icono de GitHub */
+}
+
+.redes-sociales .yt:hover {
+    background-color: #FF0000; /* Color al pasar el cursor por el icono de YouTube */
+}
+
+.footer-info {
+    margin-top: 20px;
+}
+
+.footer-info p {
+    font-size: 14px; /* Tamaño de texto más pequeño */
+    color: white; /* Color de texto para los derechos de autor */
+    margin: 0;
+}

@@ -1,0 +1,49 @@
+<!-- navbar.component.html -->
+<nav class="navbar navbar-expand-lg  ">
+    <a class="navbar-brand mx-auto" href="#">
+        <img src="Logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-top">
+      </a>
+    
+    <div class="container-fluid">
+        <!-- Enlaces de navegación (a la izquierda) -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Panel de control</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Mascotas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Registros Médicos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Recordatorio</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#">Mensajes</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#">Contactos Emergencia</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Icono con dropdown (a la derecha) -->
+        <div class="d-flex">
+            <!-- Dropdown del icono -->
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+                <!-- Ajusta el menú para alinearlo a la derecha -->
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                    <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+

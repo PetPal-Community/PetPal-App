@@ -1,0 +1,18 @@
+/* navbar.component.css */
+@import url('https://fonts.googleapis.com/css2?family=Keania+One&family=Lateef:wght@200;300;400;500;600;700;800&family=Ledger&family=Lemon&display=swap');
+
+.navbar {
+    background-color: #BF812E; /* Color de fondo */
+}
+
+.nav-link{
+    text-align: left;
+    font-family: 'Keania One', sans-serif;  
+    color: #fff;
+    padding-bottom: 9px;
+    display: inline-block;
+    text-decoration: none; 
+    border-bottom: 2px solid transparent;
+    font-size: lem;
+    margin: 10px;
+}

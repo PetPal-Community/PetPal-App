@@ -7,6 +7,8 @@ import { RegistrosMedicosComponent } from "./registros-medicos/registros-medicos
 import { UserProfileComponent } from "../../shared/components/user-profile/user-profile.component";
 import { UpdateProfileComponent } from "../../shared/components/update-profile/update-profile.component";
 import { BuscarServiciosComponent } from "./buscar-servicios/buscar-servicios.component";
+import { MensajesComponent } from "./mensajes/mensajes.component";
+import { ContactosEmerComponent } from "./contactos-emer/contactos-emer.component";
 
 export const customerRoutes: Routes =[{
     path: '',
@@ -18,7 +20,9 @@ export const customerRoutes: Routes =[{
         { path: 'registrosMedicos', component: RegistrosMedicosComponent},
         { path: 'profile', component: UserProfileComponent},
         { path: 'buscarServicios', component: BuscarServiciosComponent},
-        { path: 'profile/update', component: UpdateProfileComponent}
+        { path: 'profile/update', component: UpdateProfileComponent},
+        { path: 'mensajes', component:MensajesComponent},
+        { path: 'contactosEmergencia', component:ContactosEmerComponent}
     ]
 
 }]

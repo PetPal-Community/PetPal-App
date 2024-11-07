@@ -9,22 +9,22 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Panel de control</a>
+                    <a class="nav-link" (click)="irPanelControl()">Panel de control</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Mascotas</a>
+                    <a class="nav-link" (click)="irMascotas()">Mascotas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Registros Médicos</a>
+                    <a class="nav-link" (click)="irRegistrosMedicos()">Registros Médicos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Recordatorio</a>
+                    <a class="nav-link" (click)="irRecordatorios()">Recordatorio</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#">Mensajes</a>
+                    <a class="nav-link" (click)="irMensajes()">Mensajes</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#">Contactos Emergencia</a>
+                    <a class="nav-link" (click)="irContacto()">Contactos Emergencia</a>
                 </li>
             </ul>
         </div>
@@ -39,7 +39,7 @@
                 </button>
                 <!-- Ajusta el menú para alinearlo a la derecha -->
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                    <li><a class="dropdown-item" (click)="verPerfil()">Perfil</a></li>
                     <li><a class="dropdown-item" (click)="logOut()">Cerrar sesión</a></li>
                 </ul>
             </div>

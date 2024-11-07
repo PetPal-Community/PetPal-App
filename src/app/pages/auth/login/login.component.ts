@@ -79,7 +79,7 @@ export class LoginComponent {
 
   // MOstrat mensaje
   private showSnackBar(message: string): void {
-    this.snackBar.open('Login Sucessful','Close',{
+    this.snackBar.open(message,'Close',{
       duration:2000,
       verticalPosition: 'top'
     })

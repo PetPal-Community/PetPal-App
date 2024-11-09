@@ -1,6 +1,5 @@
 import { Routes } from "@angular/router";
 import { CustomerLayoutComponent } from "./customer-layout/customer-layout.component";
-import { MascotasComponent } from "./mascotas/mascotas.component";
 import { PanelControlComponent } from "./panel-control/panel-control.component";
 import { RecordatoriosComponent } from "./recordatorios/recordatorios.component";
 import { RegistrosMedicosComponent } from "./registros-medicos/registros-medicos.component";
@@ -9,12 +8,13 @@ import { UpdateProfileComponent } from "../../shared/components/update-profile/u
 import { BuscarServiciosComponent } from "./buscar-servicios/buscar-servicios.component";
 import { MensajesComponent } from "./mensajes/mensajes.component";
 import { ContactosEmerComponent } from "./contactos-emer/contactos-emer.component";
+import { MascotasListComponent } from "./mascotas/mascotas-list/mascotas-list.component";
 
 export const customerRoutes: Routes =[{
     path: '',
     component: CustomerLayoutComponent,
     children: [
-        { path: 'mascotas', component: MascotasComponent},
+        { path: 'mascotas', component: MascotasListComponent},
         { path: 'panelControl', component:PanelControlComponent},
         { path: 'recordatorios', component: RecordatoriosComponent},
         { path: 'registrosMedicos', component: RegistrosMedicosComponent},

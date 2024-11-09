@@ -13,15 +13,15 @@ export class MascotaService {
 
   private http = inject(HttpClient);
 
-  getPetsbyUserGId(userId: number): Observable<MascotaResponse> {
-    return this.http.get<MascotaResponse>(`${this.baseURL}/user/${userId}`);
+  getPetsbyUserGId(userId: number): Observable<MascotaResponse[]> {
+    return this.http.get<MascotaResponse[]>(`${this.baseURL}/user/${userId}`);
   }
 
-  verTODASlasMascotas(): Observable<MascotaResponse> {
-    return this.http.get<MascotaResponse>(`${this.baseURL}`);
+  verTODASlasMascotas(): Observable<MascotaResponse[]> {
+    return this.http.get<MascotaResponse[]>(`${this.baseURL}`);
   }
 
-  obtenerMascotasById(mascotaId: number): Observable<MascotaResponse> {
+  obtenerMascotaById(mascotaId: number): Observable<MascotaResponse> {
     return this.http.get<MascotaResponse>(`${this.baseURL}/${mascotaId}`);
   }
 

@@ -1,5 +1,5 @@
 /* Estilo para el contenedor principal */
-.registrosmedicos-container {
+.mascotas-container {
     display: flex;
     flex-direction: column;
     /* Organiza los elementos en columna */
@@ -21,8 +21,8 @@
 }
 
 /* Estilo para la caja con bordes redondeados */
-.registrosmedicos-subox {
-    background-color: white;
+.mascotas-subox {
+    background-color: #D9A273;
     padding: 20px;
     border-radius: 15px;
     /* Bordes redondeados */
@@ -36,12 +36,12 @@
 }
 
 /* Estilo para el contenido dentro de la caja */
-.registrosmedicos-subox h2 {
+.mascotas-subox h2 {
     margin-bottom: 15px;
     color: #333;
 }
 
-.registrosmedicos-subox p {
+.mascotas-subbox p {
     color: #666;
 }
 

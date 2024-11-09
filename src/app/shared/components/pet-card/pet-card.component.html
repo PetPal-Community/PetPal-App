@@ -1,0 +1,17 @@
+<div class="card mb-3 petcard" style="max-width: 80%; margin: auto;">
+  <div class="row g-0">
+    <div class="col-md-3"> <!-- Imagen ocupa 3/12 del ancho total -->
+      <img src="gato-compu.png" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-9 d-flex flex-column justify-content-between"> <!-- Contenido ocupa 9/12 del ancho -->
+      <div class="card-body">
+        <h5 class="card-title">{{ petProfile.nombre }}</h5>
+        <p class="card-text">{{ petProfile.edad }} años - {{ petProfile.raza }}
+      </div>
+      <div class="card-footer w-100 text-end">
+        <a href=""> <i class="fa-solid fa-pen" style="color: #020202;"></i> </a>
+        <a href="" class=""><i class="fa-solid fa-eraser" style="color: #000000;"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

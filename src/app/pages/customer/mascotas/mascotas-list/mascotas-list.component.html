@@ -1,0 +1,19 @@
+<section class="mascotas-container">
+    <div class="Titulo">
+        <h2>Mascotas</h2>
+    </div>
+
+    <div class="mascotas-subox">
+        <div class="mascotas-cards">
+            @for (mascota of mascotas; track mascota.id) {
+            <app-pet-card [petProfile]="mascota" class = "mascotas-card"></app-pet-card>
+            } @empty {
+            <li>There are no items.</li>
+            }
+            
+        </div>
+
+        <!-- Esquina inferior -->
+        <a href="#" class="link"><i class="fa-solid fa-circle-plus" style="color: #231f20;"></i></a>
+    </div>
+</section>

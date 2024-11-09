@@ -1,0 +1,43 @@
+<h2 mat-dialog-title>Crear Servicio</h2>
+<mat-dialog-content>
+    <form [formGroup]="serviceForm" (ngSubmit)="onSubmit()">
+        <p> ¿ Que servicio crearemos ?</p>
+        <mat-form-field appearance="outline">
+            <mat-label>Tipo de Servicio</mat-label>
+            <input matInput formControlName="tipo_servicio" />
+            @if(controlHasError('email', 'required')) {
+            <mat-error>Este campo es obligatorio</mat-error>
+            }
+
+        </mat-form-field >
+
+        <mat-form-field appearance="outline">
+            <mat-label>Descripción</mat-label>
+            <textarea matInput formControlName="descripcion"></textarea>
+            @if(controlHasError('email', 'required')) {
+            <mat-error>Este campo es obligatorio</mat-error>
+            }
+
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Precio</mat-label>
+            <input matInput formControlName="precio" />
+            @if(controlHasError('email', 'required')) {
+            <mat-error>Este campo es obligatorio</mat-error>
+            }
+
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Ruta de Imagen</mat-label>
+            <input matInput formControlName="picRuta" placeholder="Introduce tu Ruta de Imagen" />
+
+        </mat-form-field>
+
+        <mat-dialog-actions appearance="outline">
+            <button mat-button type="submit" [disabled]="serviceForm.invalid">Crear Servicio</button>
+            <button mat-button mat-dialog-close>Cancelar</button>
+        </mat-dialog-actions>
+    </form>
+</mat-dialog-content>

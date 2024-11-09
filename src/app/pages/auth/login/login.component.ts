@@ -29,9 +29,9 @@ export class LoginComponent {
   // CAMBIAR RUTAS
   
   private readonly CUSTOMER_ROLE = 'CUSTOMER';
-  private readonly AUTHOR_ROLE = 'AUTHOR';
-  private readonly CUSTOMER_ROUTE = '/customer/recordatorios';
-  private readonly AUTHOR_ROUTE = '/author/books/list';
+  private readonly CARER_ROLE = 'CARER';
+  private readonly CUSTOMER_ROUTE = '/customer/panelControl';
+  private readonly CARER_ROUTE = '/carer/mensajes';
   private readonly DEFAULT_ROUTE = '/home';
 
 
@@ -69,8 +69,8 @@ export class LoginComponent {
 
     if (userRole === this.CUSTOMER_ROLE) {
       this.router.navigate([this.CUSTOMER_ROUTE]);
-    } else if (userRole === this.AUTHOR_ROLE) {
-      this.router.navigate([this.AUTHOR_ROUTE]);
+    } else if (userRole === this.CARER_ROLE) {
+      this.router.navigate([this.CARER_ROUTE]);
     } else {
       this.router.navigate([this.DEFAULT_ROUTE]);
     }

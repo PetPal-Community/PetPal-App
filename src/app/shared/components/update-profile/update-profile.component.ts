@@ -50,10 +50,11 @@ export class UpdateProfileComponent {
     if (userId) {
       this.userProfileService.getUserProfile(userId).subscribe({
         next: (profile) => {
-          this.profile = profile;
+          
           if(!this.profile.picRuta){
             this.profile.picRuta = "No hay ruta"
           }
+          this.profile = profile;
 
           this.profileForm.patchValue(profile);
         },

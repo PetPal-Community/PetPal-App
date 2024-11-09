@@ -1,0 +1,32 @@
+
+<div class = Titulo>
+    <h2>Mis Servicios</h2>
+</div>
+<section class="contenedor" >
+    @for(servicio of servicios; track servicio.id) {
+    <div class="card">
+        <img src="gato-compu.png" alt="" class="image">
+        <div class="text"  [ngClass]="{'gradient1': servicio.id % 2 === 0, 'gradient2': servicio.id % 2 !== 0}"></div>
+        <div class="img-persona">
+            <img src="images/logo.jpg" alt="">
+        </div>
+        <div class="main-text" >
+            <p>{{servicio.tipo_servicio}}</p>
+        </div>
+        <div class="precio">
+            <p>S/. {{servicio.precio}}</p>
+        </div>
+        <div class="card-btn">
+            <a href="#">Learn More</a>
+        </div>
+    </div>
+    } @empty {
+        <p>Todavia no has creado ningun servicio. ¿Creamos uno 😏?</p>
+        }
+        
+</section>
+
+<div class="plus">
+    <a (click)="irCrearServicio()" class="link "><i class="fa-solid fa-circle-plus" style="color: #231f20;"></i></a>
+</div>
+

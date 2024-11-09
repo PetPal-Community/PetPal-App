@@ -1,0 +1,45 @@
+/* Dialog Title */
+h2[mat-dialog-title] {
+    font-size: 1.5rem;
+    color: #3f51b5; /* Primary color */
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* Form Fields Styling */
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  /* Input Field Styling */
+  input[matInput], textarea[matInput] {
+    font-size: 1rem;
+  }
+  
+  /* Dialog Actions - Align Buttons */
+  mat-dialog-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  
+  /* Button Styling */
+  button[mat-button] {
+    font-weight: bold;
+  }
+  
+  /* Submit Button Styling */
+  button[type="submit"] {
+    background-color: #4CAF50; /* Green for Submit */
+    color: white;
+  }
+  
+  button[type="submit"]:disabled {
+    background-color: #c8e6c9; /* Lighter green when disabled */
+  }
+  
+  /* Cancel Button Styling */
+  button[mat-dialog-close] {
+    color: #f44336; /* Red for Cancel */
+  }

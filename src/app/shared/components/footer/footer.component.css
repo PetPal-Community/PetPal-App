@@ -3,6 +3,10 @@
     background-color: #BF815E; /* Fondo con el color que proporcionaste */
     padding: 20px 0; /* Espaciado vertical */
     text-align: center;
+    position: absolute; /* Cambiado a absolute */
+    bottom: 0; /* Establece que el footer se posiciona al final */
+    left: 0;
+    width: 100%; /* Hace que el footer ocupe todo el ancho */
 }
 
 .redes-sociales .contenedor-redes {

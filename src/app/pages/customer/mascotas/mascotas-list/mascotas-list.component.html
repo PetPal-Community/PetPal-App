@@ -8,7 +8,7 @@
             @for (mascota of mascotas; track mascota.id) {
             <app-pet-card [petProfile]="mascota" class = "mascotas-card"></app-pet-card>
             } @empty {
-            <li>There are no items.</li>
+            <p>No tienes mascotas agregadas. 😔</p>
             }
             
         </div>

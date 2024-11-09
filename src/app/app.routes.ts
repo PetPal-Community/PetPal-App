@@ -15,6 +15,11 @@ export const routes: Routes = [
     {
         path:'customer', loadChildren: () => import('./pages/customer/customer.routes').then(c => c.customerRoutes),
         canActivate: [authGuard]
+    },
+
+    {
+        path:'carer', loadChildren:() => import('./pages/carer/carer.routes').then(ca => ca.carerRoutes),
+        canActivate: [authGuard]
     }
 
 ];

@@ -7,7 +7,22 @@
     background-color: #D9D9D9;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   }
+  .profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Esto hace que la imagen sea circular */
+    overflow: hidden; /* Asegura que la imagen no sobresalga del círculo */
+    margin: 0 auto 20px auto; /* Centra la imagen y agrega un poco de espacio abajo */
+    background-color: aliceblue;
+  }
   
+  .profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio del círculo sin distorsionarse */
+  }
+
+
   h2 {
     color: #2c3e50;
     font-size: 28px;

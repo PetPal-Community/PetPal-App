@@ -1,15 +1,18 @@
 @if (profile){
-    <div class="container">
-        <h2>Perfil de Usuario</h2>
-        <p><strong>Nombre:</strong> {{ profile.nombre }} {{ profile.apellido }}</p>
-        <p><strong>Email:</strong> {{ profile.email }}</p>
-        <p><strong>Picture:</strong> {{ profile.picRuta }}</p>
-        <p><strong>Telefono:</strong> {{ profile.telefono }}</p>
-      
-        <!-- Botón para actualizar perfil -->
-        <button (click)="navigateToUpdateProfile()" class="update-button">
-          Editar Perfil
-        </button>
-      </div>
-}
+<div class="container">
+  <!-- Imagen de perfil circular -->
+  <div class="profile-picture">
+    @if(profile.picRuta){<img [src]="profile.picRuta | apiImg " alt="Imagen del perfil" >} @else {<img [src]="'no-profile-picture.png'" alt="No-imagen">}
+  </div>
 
+  <h2>Perfil de Usuario</h2>
+  <p><strong>Nombre:</strong> {{ profile.nombre }} {{ profile.apellido }}</p>
+  <p><strong>Email:</strong> {{ profile.email }}</p>
+  <p><strong>Telefono:</strong> {{ profile.telefono }}</p>
+
+  <!-- Botón para actualizar perfil -->
+  <button (click)="navigateToUpdateProfile()" class="update-button">
+    Editar Perfil
+  </button>
+</div>
+}

@@ -39,10 +39,18 @@
                 }
               </mat-form-field>
       
-              <mat-form-field class="form-field">
-                <mat-label>PicRuta</mat-label>
-                <input matInput formControlName="picRuta" placeholder="Ingrese tu picRuta">
-              </mat-form-field>
+              <div class="file-upload w-100">
+                <label>Imagen para el perfil</label>
+                <input
+                  type="file"
+                  class="form-control"
+                  accept=".png,.jpg,.jpeg"
+                  (change)="uploadFile($event, 'picRuta')"
+                />
+                <!-- <div class="small text-muted">
+                  Ruta actual: {{ form.get("coverPath")!.value }}
+                </div> -->
+              </div>
       
               <button mat-raised-button color="primary" class="submit-button" type="submit" [disabled]="profileForm.invalid">
                 Guardar Cambios

@@ -5,11 +5,12 @@ import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserPersonaResponse } from '../../models/userPersona-response.model';
 import { CommonModule } from '@angular/common';
+import { ApiImgPipe } from '../../../core/pipes/api-img.pipe';
 
 @Component({
   selector: 'app-user-profile',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ApiImgPipe],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css'
 })

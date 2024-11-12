@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { AuthService } from '../../../core/services/auth.service';
 import { UserProfileService } from '../../../core/services/user-profile.service';
 import { UserPersonaResponse } from '../../models/userPersona-response.model';
+import { MediaService } from '../../../core/services/media.service';
 
 @Component({
   selector: 'app-update-profile',
@@ -28,6 +29,7 @@ export class UpdateProfileComponent {
   private authService = inject(AuthService);
   private router = inject(Router);
   private snackBar = inject(MatSnackBar);
+  private mediaService = inject(MediaService);
 
   constructor() {
     this.profileForm = this.fb.group({
@@ -43,6 +45,25 @@ export class UpdateProfileComponent {
     this.loadUserProfile();
   }
 
+  uploadFile(event: Event, control: string): void {
+    const file = (event.target as HTMLInputElement).files?.[0];
+    if (file) {
+      const formData = new FormData();
+      formData.append('file', file);
+      this.mediaService.subirArchivo(formData).subscribe({
+        next: (response) => {
+          if (this.profileForm.get(control)) {
+            this.profileForm.get(control)!.setValue(response.path);
+          } else {
+            console.warn(`El control '${control}' no está definido en el formulario.`);
+          }
+        },
+        error: () => this.showSnackBar('Error al cargar el archivo.'),
+      });
+      console.log('Control:', control, 'Formulario:', this.profileForm.controls);
+    }
+  }
+
   loadUserProfile(): void {
     const authData = this.authService.getUser();
     const userId = authData?.id;
@@ -51,9 +72,9 @@ export class UpdateProfileComponent {
       this.userProfileService.getUserProfile(userId).subscribe({
         next: (profile) => {
           
-          if(!this.profile.picRuta){
-            this.profile.picRuta = "No hay ruta"
-          }
+          // if(!this.profile.picRuta){
+          //   this.profile.picRuta = "No hay ruta"
+          // }
           this.profile = profile;
 
           this.profileForm.patchValue(profile);

@@ -3,12 +3,12 @@
     <h2>Mis Servicios</h2>
 </div>
 <section class="contenedor" >
-    @for(servicio of servicios; track servicio.id;  let idx = $index) {
+    @for(servicio of servicios; track servicio;  let idx = $index) {
     <div class="card">
-        <img src="gato-compu.png" alt="" class="image">
+        <img mat-card-image [src]="servicio.picRuta | apiImg" [alt]="servicio.tipo_servicio" class="image">
         <div class="text"  [ngClass]="{'gradient1': idx % 2 === 0, 'gradient2': idx % 2 !== 0}"></div>
         <div class="img-persona">
-            <img src="images/logo.jpg" alt="">
+            <img src="" alt="logo">
         </div>
         <div class="main-text" >
             <p>{{servicio.tipo_servicio}}</p>
@@ -16,10 +16,13 @@
         <div class="precio">
             <p>S/. {{servicio.precio}}</p>
         </div>
+        
         <div class="card-btn">
-            <a href="#">Learn More</a>
+            <a (click)="cargarServicioPorId(servicio.id)">Ver más</a>
         </div>
+        <i class="fa-solid fa-pen-to-square icon" (click)="editarServicio(servicio.id)"  style="color: #1d1007; margin-left: 8px;"></i>
     </div>
+    
     } @empty {
         <p>Todavia no has creado ningun servicio. ¿Creamos uno 😏?</p>
         }

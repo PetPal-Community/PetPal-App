@@ -1,0 +1,39 @@
+.servicio-dialog-container {
+    padding: 20px;  /* Padding general para el contenido dentro del dialog */
+    max-width: 400px;  /* Establecer un ancho máximo para el dialog */
+    text-align: left;  /* Alineación por defecto a la izquierda */
+  }
+  
+  .servicio-image {
+    width: 100%;  /* La imagen ocupa todo el ancho disponible */
+    height: 200px;  /* Establecer altura fija */
+    object-fit: cover;  /* Mantener la proporción de la imagen sin distorsión */
+    margin-bottom: 20px;  /* Espaciado debajo de la imagen */
+  }
+  
+  .servicio-title {
+    text-align: center;  /* Centrar el título */
+    margin: 10px 0;
+  }
+  
+  .label {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .content {
+    padding-left: 10px;  /* Asegura que el contenido esté alineado a la izquierda */
+  }
+  
+  .contratar-button {
+    display: block;
+    margin: 20px auto;  /* Centrar el botón */
+    background-color: red;  /* Color de fondo rojo */
+    color: white;  /* Texto en blanco */
+    padding: 10px 20px;
+    border-radius: 4px;  /* Bordes redondeados opcionales */
+  }
+  
+  .contratar-button:hover {
+    background-color: darkred;  /* Efecto de hover en el botón */
+  }

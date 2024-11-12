@@ -96,6 +96,13 @@ body {
     animation: button-anim 2s ease 0s infinite normal forwards;
 }
 
+.icon {
+    position: absolute;
+    right: 150px;
+    bottom: 10%;
+    font-size: 30px;
+}
+
 @keyframes button-anim {
     0% {
         transform: translate(0);

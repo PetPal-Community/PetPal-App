@@ -1,7 +1,7 @@
-<h2 mat-dialog-title>Crear Servicio</h2>
+<h2 mat-dialog-title> @if(id){Editar} @else {Crear} Servicio</h2>
 <mat-dialog-content>
     <form [formGroup]="serviceForm" (ngSubmit)="onSubmit()">
-        <p> ¿ Que servicio crearemos ?</p>
+        <p> @if (id) { Vamos a editar el servicio } @else {¿ Que servicio crearemos ?}</p>
         <mat-form-field appearance="outline">
             <mat-label>Tipo de Servicio</mat-label>
             <input matInput formControlName="tipo_servicio" />
@@ -9,7 +9,7 @@
             <mat-error>Este campo es obligatorio</mat-error>
             }
 
-        </mat-form-field >
+        </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>Descripción</mat-label>
@@ -29,14 +29,22 @@
 
         </mat-form-field>
 
-        <mat-form-field appearance="outline">
-            <mat-label>Ruta de Imagen</mat-label>
-            <input matInput formControlName="picRuta" placeholder="Introduce tu Ruta de Imagen" />
-
-        </mat-form-field>
+        <div class="file-upload w-100">
+            <label>Imagen del servicio</label>
+            <input
+              type="file"
+              class="form-control"
+              accept=".png,.jpg,.jpeg"
+              (change)="uploadFile($event, 'picRuta')"
+            />
+            <!-- <div class="small text-muted">
+              Ruta actual: {{ form.get("coverPath")!.value }}
+            </div> -->
+          </div>
 
         <mat-dialog-actions appearance="outline">
-            <button mat-button type="submit" [disabled]="serviceForm.invalid">Crear Servicio</button>
+            <button mat-button type="submit" [disabled]="serviceForm.invalid">@if (id){Editar Servicio} @else {Crear
+                Servicio}</button>
             <button mat-button mat-dialog-close>Cancelar</button>
         </mat-dialog-actions>
     </form>

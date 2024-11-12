@@ -18,7 +18,8 @@ export const carerRoutes: Routes =[{
         {path: 'mensajes', component: MensajesListComponent},
         {path: 'profile', component: UserProfileComponent},
         {path: 'profile/update', component: UpdateProfileComponent},
-        {path: 'servicios/crear', component: ServicioDialogComponent}
+        {path: 'servicios/crear', component: ServicioDialogComponent},
+        {path: 'servicios/update', component: ServicioDialogComponent}
     
     ]
 

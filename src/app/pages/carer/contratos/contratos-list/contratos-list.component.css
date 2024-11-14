@@ -99,3 +99,31 @@
   .user-info small {
     color: #888785;
   }
+
+  .tag-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .tagge {
+    background-color: #e48c8c;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 12px;
+    padding: 2px 10px;
+    text-transform: uppercase;
+    text-decoration: none; /* Quita el subrayado en el enlace */
+  }
+  
+  .aceptar {
+    margin-left: auto;
+    background-color: #087e2f;
+    text-decoration: none; /* Quita el subrayado en el enlace */
+  }
+
+  .tagge:hover {
+    opacity: 0.8; /* Agrega un pequeño efecto en el hover si deseas */
+  }

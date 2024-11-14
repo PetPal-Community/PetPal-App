@@ -16,7 +16,7 @@
                 }">
                     {{ contrato.estado }}
                 </span>
-              @if (contrato.estado==='Aceptado' && !contrato.pagoContrato) {
+              @if (contrato.estado==='Aceptado' && contrato.pagoEstado==="PENDING") {
                 <a class="tag tag-pago"  href="#">
                     Pagar
                 </a>

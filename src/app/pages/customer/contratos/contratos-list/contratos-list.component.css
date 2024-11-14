@@ -48,17 +48,41 @@
     padding: 20px;
     min-height: 250px;
   }
+  .tag-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Mueve 'tag-pago' al lado derecho */
+    width: 100%;
+  }
+  
+  .tag-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
   .tag {
     background-color: #ccc;
     color: #fff;
     border-radius: 50px;
     font-size: 12px;
-    margin: 0;
     padding: 2px 10px;
     text-transform: uppercase;
+    text-decoration: none; /* Quita el subrayado en el enlace */
+  }
+  
+  .tag-pago {
+    margin-left: auto;
+    background-color: #44f37e;
+    text-decoration: none; /* Quita el subrayado en el enlace */
+  }
+  
+  .tag-pago:hover {
+    opacity: 0.8; /* Agrega un pequeño efecto en el hover si deseas */
   }
 
-  
+
   .tag-teal {
     background-color: #92d4e4;
   }

@@ -19,7 +19,7 @@
                 {{contrato.detalles}}
             </p>
             <p>
-                Precio final del contrato: S/. {{contrato.servicioPrecio}}
+                Precio final del contrato: S/. {{contrato.pagoContrato}}
             </p>
             <div class="user">
                 @if(contrato.picRutaUsuario){<img [src]="contrato.picRutaUsuario | apiImg " alt="Imagen del perfil" >} @else {<img [src]="'no-profile-picture.png'" alt="No-imagen">}

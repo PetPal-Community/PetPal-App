@@ -4,5 +4,6 @@ export interface ServicioResponse{
     tipo_servicio: string,
     descripcion: string,
     precio: Float32Array,
-    cuidadorNombre : string
+    cuidadorNombre : string,
+    picRutaCuidador: string
 }

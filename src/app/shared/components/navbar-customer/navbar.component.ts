@@ -59,5 +59,8 @@ export class NavbarComponent {
     this.router.navigate(['/customer/contactosEmergencia']);
   }
 
+  irContratos(): void{
+    this.router.navigate(['/customer/verContratos']);
+  }
   
 }

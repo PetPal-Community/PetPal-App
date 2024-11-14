@@ -22,9 +22,9 @@
                 Precio final del contrato: S/. {{contrato.servicioPrecio}}
             </p>
             <div class="user">
-                @if(contrato.picRutaUsuario){<img [src]="contrato.picRutaUsuario | apiImg " alt="Imagen del perfil" >} @else {<img [src]="'no-profile-picture.png'" alt="No-imagen">}
+                @if(contrato.picRutaCuidador){<img [src]="contrato.picRutaCuidador | apiImg " alt="Imagen del perfil" >} @else {<img [src]="'no-profile-picture.png'" alt="No-imagen">}    
                 <div class="user-info">
-                    <h5>{{contrato.usuarioNombreComplt}}</h5>
+                    <h5>{{contrato.cuidadorNombreComplt}}</h5>
                     <small>{{contrato.duracionContrato}} de contrato</small>
                 </div>
             </div>
@@ -32,7 +32,7 @@
     </div>
 
     }@empty {
-    <p> Estamos en busqueda de contratos 🧐</p>
+    <p>Todavia no has contratado a nadie</p>
     }
 
 </div>

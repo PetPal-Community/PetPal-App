@@ -3,6 +3,5 @@ export interface ContratosRequest{
     estado:string,
     detalles: string,
     servicio: number,
-    cuidadorGId: number,
     usuarioGId: number
 }

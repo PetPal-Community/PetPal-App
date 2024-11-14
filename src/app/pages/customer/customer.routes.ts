@@ -5,10 +5,12 @@ import { RecordatoriosComponent } from "./recordatorios/recordatorios.component"
 import { RegistrosMedicosComponent } from "./registros-medicos/registros-medicos.component";
 import { UserProfileComponent } from "../../shared/components/user-profile/user-profile.component";
 import { UpdateProfileComponent } from "../../shared/components/update-profile/update-profile.component";
-import { BuscarServiciosComponent } from "./buscar-servicios/buscar-servicios.component";
+import { BuscarServiciosComponent } from "./buscar-servicios/servicios-list/buscar-servicios.component";
 import { MensajesComponent } from "./mensajes/mensajes.component";
 import { ContactosEmerComponent } from "./contactos-emer/contactos-emer.component";
 import { MascotasListComponent } from "./mascotas/mascotas-list/mascotas-list.component";
+import { ContratoFormularioComponent } from "./contratos/contrato-formulario/contrato-formulario.component";
+import { ContratosListCustomerComponent } from "./contratos/contratos-list/contratos-list.component";
 
 export const customerRoutes: Routes =[{
     path: '',
@@ -22,7 +24,9 @@ export const customerRoutes: Routes =[{
         { path: 'buscarServicios', component: BuscarServiciosComponent},
         { path: 'profile/update', component: UpdateProfileComponent},
         { path: 'mensajes', component:MensajesComponent},
-        { path: 'contactosEmergencia', component:ContactosEmerComponent}
+        { path: 'contactosEmergencia', component:ContactosEmerComponent},
+        { path: 'crearContrato/:servicioId', component:ContratoFormularioComponent},
+        { path: 'verContratos', component:ContratosListCustomerComponent}
     ]
 
 }]

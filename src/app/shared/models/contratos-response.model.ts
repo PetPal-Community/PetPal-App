@@ -9,5 +9,7 @@ export interface ContratosResponse{
     servicioPrecio: number,
     usuarioNombreComplt:string,
     cuidadorNombreComplt:string
+    picRutaCuidador: string,
+    picRutaUsuario:string
 }
 

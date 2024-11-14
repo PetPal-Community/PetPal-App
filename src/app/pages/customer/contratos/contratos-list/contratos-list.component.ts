@@ -1,4 +1,4 @@
-import { Component, Inject, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ContratosResponse } from '../../../../shared/models/contratos-response.model';
 import { AuthService } from '../../../../core/services/auth.service';
 import { ContratoService } from '../../../../core/services/contrato.service';
@@ -12,29 +12,27 @@ import { ApiImgPipe } from '../../../../core/pipes/api-img.pipe';
   templateUrl: './contratos-list.component.html',
   styleUrl: './contratos-list.component.css'
 })
-export class ContratosListComponent implements OnInit {
-
+export class ContratosListCustomerComponent {
   contratos: ContratosResponse[] = [];
-
   private authService = inject(AuthService);
-  private contratoService = inject(ContratoService);
+  private contratoServicio=inject(ContratoService);
 
-
-  ngOnInit(): void {
+  ngOnInit(): void{
     this.cargarContratos();
   }
 
   cargarContratos(): void {
     const authData = this.authService.getUser();
-    const carerId = authData?.id;
-    if (carerId) {
-      this.contratoService.getContratoByCarerId(carerId).subscribe({
-        next: (contrato) => {
-          this.contratos = contrato;
-          console.log(this.contratos);
-        }
+    const customerId = authData?.id;
 
+    if(customerId){
+      this.contratoServicio.getContratoByCustomerId(customerId).subscribe({
+        next: (contrato)=>{
+          this.contratos = contrato;
+        }
       })
     }
+
   }
+
 }

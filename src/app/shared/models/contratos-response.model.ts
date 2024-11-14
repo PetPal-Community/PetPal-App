@@ -11,6 +11,7 @@ export interface ContratosResponse{
     cuidadorNombreComplt:string
     picRutaCuidador: string,
     picRutaUsuario:string,
-    pagoContrato:Float32Array
+    pagoContrato:Float32Array,
+    pagoEstado: string
 }
 

@@ -1,1 +1,32 @@
-<p>pagos works!</p>
+
+
+<h3 mat-dialog-title>Formulario del Pago</h3>
+<mat-dialog-content>
+    <form [formGroup]="pagoForm" (ngSubmit)="crearPago()">
+        <mat-form-field class="Metodo-Pago" appearance="outline">
+            <mat-label> Metodo de Pago: </mat-label>
+            <mat-select formControlName="metodoPago" name="metodoPago">
+                @for (metodo of metodosPagos; track $index) {
+                    <mat-option [value]="metodo.value">{{metodo.viewValue}}</mat-option>
+                }
+            </mat-select>
+            @if(controlHasError('metodoPago', 'required')) {
+                <mat-error>Este campo es obligatorio</mat-error>
+            }
+        </mat-form-field>
+        <mat-form-field class="Valor-Pago" appearance="outline">
+            <mat-label> Ingrese el valor del pago final</mat-label>
+            <input matInput formControlName="valorPago"/>
+            @if(controlHasError('valorPago', 'required')) {
+                <mat-error>Este campo es obligatorio</mat-error>
+            }
+        </mat-form-field>
+
+        <mat-dialog-actions appearance="outline">
+            
+            <button mat-button mat-dialog-close>Cancelar</button>
+            <button mat-button type="submit" [disabled]="pagoForm.invalid"> Crear Pago</button>
+        </mat-dialog-actions>
+
+    </form>
+</mat-dialog-content>

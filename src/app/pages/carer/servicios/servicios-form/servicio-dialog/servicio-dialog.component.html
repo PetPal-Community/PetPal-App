@@ -5,7 +5,7 @@
         <mat-form-field appearance="outline">
             <mat-label>Tipo de Servicio</mat-label>
             <input matInput formControlName="tipo_servicio" />
-            @if(controlHasError('email', 'required')) {
+            @if(controlHasError('tipo_servicio', 'required')) {
             <mat-error>Este campo es obligatorio</mat-error>
             }
 
@@ -14,7 +14,7 @@
         <mat-form-field appearance="outline">
             <mat-label>Descripción</mat-label>
             <textarea matInput formControlName="descripcion"></textarea>
-            @if(controlHasError('email', 'required')) {
+            @if(controlHasError('descripcion', 'required')) {
             <mat-error>Este campo es obligatorio</mat-error>
             }
 
@@ -23,7 +23,7 @@
         <mat-form-field appearance="outline">
             <mat-label>Precio</mat-label>
             <input matInput formControlName="precio" />
-            @if(controlHasError('email', 'required')) {
+            @if(controlHasError('precio', 'required')) {
             <mat-error>Este campo es obligatorio</mat-error>
             }
 

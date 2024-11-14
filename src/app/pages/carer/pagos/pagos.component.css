@@ -1,0 +1,77 @@
+/* Contenedor principal del diálogo */
+mat-dialog-content {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Título del formulario */
+  h3[mat-dialog-title] {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #3f51b5; /* Color primario */
+  }
+  
+  /* Estilos para los campos de formulario con padding adicional */
+  mat-form-field.Metodo-Pago,
+  mat-form-field.Valor-Pago {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 0;
+  }
+  
+  /* Ajuste de padding en el interior de cada campo */
+  .mat-form-field-infix {
+    padding: 12px;
+  }
+  
+  mat-label {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Botones en el formulario */
+  mat-dialog-actions {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+  }
+  
+  /* Diseño de botones con margen y fondo sencillo */
+  button[mat-button] {
+    font-weight: bold;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Botón Crear Pago */
+  button[type="submit"] {
+    background-color: #29ac64; /* Color principal */
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #60f0a1; /* Oscuro al pasar sobre él */
+  }
+  
+  /* Botón Cancelar */
+  button[mat-dialog-close] {
+    background-color: #757575; /* Color gris neutral */
+  }
+  
+  button[mat-dialog-close]:hover {
+    background-color: #5a5a5a; /* Gris oscuro en hover */
+  }
+  
+  /* Mensaje de error */
+  mat-error {
+    font-size: 0.9rem;
+    color: #d32f2f;
+  }
+  

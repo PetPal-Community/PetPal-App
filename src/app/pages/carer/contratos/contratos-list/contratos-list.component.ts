@@ -4,6 +4,8 @@ import { AuthService } from '../../../../core/services/auth.service';
 import { ContratoService } from '../../../../core/services/contrato.service';
 import { CommonModule } from '@angular/common';
 import { ApiImgPipe } from '../../../../core/pipes/api-img.pipe';
+import { MatDialog } from '@angular/material/dialog';
+import { PagosComponent } from '../../pagos/pagos.component';
 
 @Component({
   selector: 'app-contratos-list',
@@ -18,7 +20,7 @@ export class ContratosListComponent implements OnInit {
 
   private authService = inject(AuthService);
   private contratoService = inject(ContratoService);
-
+  readonly dialog = inject(MatDialog);
 
   ngOnInit(): void {
     this.cargarContratos();
@@ -37,4 +39,9 @@ export class ContratosListComponent implements OnInit {
       })
     }
   }
+
+  crearPago(contratoId:number): void{
+    this.dialog.open(PagosComponent, {data: contratoId})
+  }
+  
 }

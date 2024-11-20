@@ -1,0 +1,38 @@
+<div>
+    <h2>Reporte de Contratos</h2>
+  
+    <!-- Campos para seleccionar mes y año -->
+    <div>
+      <label for="mes">Mes:</label>
+      <select id="mes" [(ngModel)]="mes">
+        <option *ngFor="let m of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]" [value]="m">
+          {{ m }}
+        </option>
+      </select>
+    </div>
+  
+    <div>
+      <label for="anio">Año:</label>
+      <input type="number" id="anio" [(ngModel)]="anio" [min]="2000" [max]="2100" />
+    </div>
+  
+    <!-- Botón para cargar el reporte -->
+    <button (click)="cargarReporte()">Cargar Reporte</button>
+  
+    <!-- Mostrar felicitaciones después de cargar el reporte -->
+    <div *ngIf="felicitacionVisible" class="felicitaciones">
+      <span class="felicitaciones-icon"><i class="fa-solid fa-face-laugh-beam fa-bounce" style="color: #ffcb0f;"></i></span> ¡Felicidades por tu avance!
+    </div>
+  
+    <!-- Mostrar el reporte -->
+    <div *ngIf="reporte">
+      <p>Total de contratos: {{ reporte.totalContracts }}</p>
+      <p>Total generado: {{ reporte.totalAmount }}</p>
+    </div>
+  
+    <!-- Mostrar error si hay alguno -->
+    <div *ngIf="error">
+      <p style="color: red;">{{ error }}</p>
+    </div>
+  </div>
+  

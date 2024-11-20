@@ -1,0 +1,116 @@
+/* Estilo general para el contenedor */
+div {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para el encabezado */
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para los campos de selección de mes y año */
+  label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #555;
+  }
+  
+  /* Estilo para los inputs y selects */
+  select, input[type="number"] {
+    padding: 8px;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 150px;
+  }
+  
+  select:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+  }
+  
+  /* Estilo para el botón */
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilo para el reporte */
+  div p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  div p:first-of-type {
+    font-weight: bold;
+    color: #28a745;  /* Color verde para "Total de contratos" */
+  }
+  
+  div p:last-of-type {
+    font-weight: bold;
+    color: #28a745;  /* Color verde para "Total generado" */
+  }
+  
+  /* Estilo para el error */
+  div p[style] {
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+
+/* Animación de felicitaciones */
+@keyframes confetti {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Estilo para el mensaje de felicitaciones */
+  .felicitaciones {
+    font-size: 20px;
+    font-weight: bold;
+    color: #28a745;
+    text-align: center;
+    margin-top: 20px;
+    animation: confetti 2s ease-in-out;
+  }
+  
+  /* Opcional: puedes agregar un icono de check (si quieres) */
+  .felicitaciones-icon {
+    font-size: 40px;
+    margin-right: 10px;
+    color: #28a745;
+  }

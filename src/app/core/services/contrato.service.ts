@@ -1,10 +1,11 @@
 import { Injectable, inject } from '@angular/core';
 
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { ContratosResponse } from '../../shared/models/contratos-response.model';
 import { Observable } from 'rxjs';
 import { ContratosRequest } from '../../shared/models/contratos-request.model';
+import { ContratosReport } from '../../shared/models/contratos-report.model';
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +30,15 @@ export class ContratoService {
 
   getContratobyId(contratoId:number): Observable<ContratosResponse>{
     return this.http.get<ContratosResponse>(`${this.baseURL}/${contratoId}`);
+  }
+
+
+  getContractReportByMonth(cuidadorId: number, mes: number, anio: number): Observable<ContratosReport> {
+    const params = new HttpParams()
+      .set('mes', mes.toString())
+      .set('anio', anio.toString());
+
+    return this.http.get<ContratosReport>(`${this.baseURL}/reporte/${cuidadorId}`, { params });
   }
 
 

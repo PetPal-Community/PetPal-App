@@ -7,6 +7,7 @@ import { MensajesListComponent } from "./mensajes/mensajes-list/mensajes-list.co
 import { UserProfileComponent } from "../../shared/components/user-profile/user-profile.component";
 import { UpdateProfileComponent } from "../../shared/components/update-profile/update-profile.component";
 import { ServicioDialogComponent } from "./servicios/servicios-form/servicio-dialog/servicio-dialog.component";
+import { ReporteComponent } from "./contratos/reporte/reporte.component";
 
 export const carerRoutes: Routes =[{
     path: '',
@@ -19,7 +20,8 @@ export const carerRoutes: Routes =[{
         {path: 'profile', component: UserProfileComponent},
         {path: 'profile/update', component: UpdateProfileComponent},
         {path: 'servicios/crear', component: ServicioDialogComponent},
-        {path: 'servicios/update', component: ServicioDialogComponent}
+        {path: 'servicios/update', component: ServicioDialogComponent},
+        {path: 'reporte', component:ReporteComponent}
     
     ]
 

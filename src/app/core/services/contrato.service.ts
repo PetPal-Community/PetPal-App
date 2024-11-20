@@ -27,6 +27,10 @@ export class ContratoService {
     return this.http.get<ContratosResponse[]>(`${this.baseURL}`);
   }
 
+  getContratobyId(contratoId:number): Observable<ContratosResponse>{
+    return this.http.get<ContratosResponse>(`${this.baseURL}/${contratoId}`);
+  }
+
 
   crearContrato(contratoData: ContratosRequest): Observable<ContratosResponse>{
     return this.http.post<ContratosResponse>(`${this.baseURL}`, contratoData)

@@ -12,6 +12,7 @@ import { MascotasListComponent } from "./mascotas/mascotas-list/mascotas-list.co
 import { ContratoFormularioComponent } from "./contratos/contrato-formulario/contrato-formulario.component";
 import { ContratosListCustomerComponent } from "./contratos/contratos-list/contratos-list.component";
 import { CalendarioComponent } from "./recordatorios/calendario/calendario.component";
+import { ConfirmacionCompraComponent } from "./contratos/confirmacion-compra/confirmacion-compra.component";
 
 export const customerRoutes: Routes =[{
     path: '',
@@ -27,7 +28,8 @@ export const customerRoutes: Routes =[{
         { path: 'mensajes', component:MensajesComponent},
         { path: 'contactosEmergencia', component:ContactosEmerComponent},
         { path: 'crearContrato/:servicioId', component:ContratoFormularioComponent},
-        { path: 'verContratos', component:ContratosListCustomerComponent}
+        { path: 'verContratos', component:ContratosListCustomerComponent},
+        { path: 'confirmacion/:purchaseId', component:ConfirmacionCompraComponent}
     ]
 
 }]

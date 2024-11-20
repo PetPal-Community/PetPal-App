@@ -39,7 +39,7 @@ export class ContratosListCustomerComponent {
         this.checkoutServicio.capturePaypalOrder(token)
         .subscribe(response => {
           if (response.completed) {
-            this.router.navigate(['/customer/verContratos', response.purchaseId]);
+            this.router.navigate(['/customer/confirmacion', response.purchaseId]);
           }
         })
     }

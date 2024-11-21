@@ -36,7 +36,7 @@
             }
             <div class="user">
                 @if(contrato.picRutaCuidador){<img [src]="contrato.picRutaCuidador | apiImg " alt="Imagen del perfil">}
-                @else {<img [src]="'no-profile-picture.png'" alt="No-imagen">}
+                @else {<img [src]="'../../../../../assets/img/no-profile-picture.png'" alt="No-imagen">} 
                 <div class="user-info">
                     <h5>{{contrato.cuidadorNombreComplt}}</h5>
                     <small>{{contrato.duracionContrato}} de contrato</small>

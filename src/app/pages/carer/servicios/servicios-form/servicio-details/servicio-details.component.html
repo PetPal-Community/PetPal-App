@@ -1,5 +1,6 @@
+
 <div class="servicio-dialog-container">
-    @if(servicio.picRuta){<img [src]="servicio.picRuta | apiImg " alt="Imagen del servicio" class="servicio-image">} @else {<img [src]="'no-image.png'" alt="aaaa" class="servicio-image">}
+    @if(servicio.picRuta){<img [src]="servicio.picRuta | apiImg " alt="Imagen del servicio" class="servicio-image">} @else {<img [src]="'../../../../../../assets/img/no-image.png'" alt="aaaa" class="servicio-image">}
     <h5 class="servicio-title">{{servicio.tipo_servicio}}</h5>
     <p class="label">Descripción:</p>
     <p class="content">{{servicio.descripcion}}</p>

@@ -2,8 +2,8 @@
 <div class="container">
   <!-- Imagen de perfil circular -->
   <div class="profile-picture">
-    @if(profile.picRuta){<img [src]="profile.picRuta | apiImg " alt="Imagen del perfil" >} @else {<img [src]="'no-profile-picture.png'" alt="No-imagen">}
-  </div>
+    @if(profile.picRuta){<img [src]="profile.picRuta | apiImg " alt="Imagen del perfil" >} @else {<img [src]="'../../../../assets/img/no-profile-picture.png'" alt="No-imagen">}
+  </div> 
 
   <h2>Perfil de Usuario</h2>
   <p><strong>Nombre:</strong> {{ profile.nombre }} {{ profile.apellido }}</p>

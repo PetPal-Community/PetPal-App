@@ -1,4 +1,4 @@
-<section class="mascotas-container">
+<div class="mascotas-container">
     <div class="Titulo">
         <h2>Mascotas</h2>
     </div>
@@ -6,7 +6,23 @@
     <div class="mascotas-subox">
         <div class="mascotas-cards">
             @for (mascota of mascotas; track mascota.id) {
-            <app-pet-card [petProfile]="mascota" class = "mascotas-card"></app-pet-card>
+                <div class="card mb-3 petcard" style="max-width: 80%; margin: auto;">
+                    <div class="row g-0">
+                      <div class="col-md-3"> <!-- Imagen ocupa 3/12 del ancho total -->
+                        <img src="gato-compu.png" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-9 d-flex flex-column justify-content-between"> <!-- Contenido ocupa 9/12 del ancho -->
+                        <div class="card-body">
+                          <h5 class="card-title">{{ mascota.nombre }}</h5>
+                          <p class="card-text">{{ mascota.edad }} años - {{ mascota.raza }}
+                        </div>
+                        <div class="card-footer w-100 text-end">
+                          <a (click)="editarMascota(mascota.id)"> <i class="fa-solid fa-pen" style="color: #020202;"></i> </a>
+                          <a (click)="borrarMascota(mascota.id)"><i class="fa-solid fa-eraser" style="color: #000000;"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             } @empty {
             <p>No tienes mascotas agregadas. 😔</p>
             }
@@ -14,6 +30,6 @@
         </div>
 
         <!-- Esquina inferior -->
-        <a href="#" class="link"><i class="fa-solid fa-circle-plus" style="color: #231f20;"></i></a>
+        <a (click)="crearMascota()" class="link"><i class="fa-solid fa-circle-plus" style="color: #231f20;"></i></a>
     </div>
-</section>
+</div>

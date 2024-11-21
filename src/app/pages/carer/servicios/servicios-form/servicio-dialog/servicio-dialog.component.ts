@@ -118,17 +118,7 @@ export class ServicioDialogComponent {
       if (userId) {
         const serviceData = this.serviceForm.value;
         serviceData.cuidadorGId = userId;
-        //   this.sservice.crearServicioCarer(serviceData).subscribe({
-        //   next: (response) => {
-        //     this.showSnackBar("Servicio Creado Exitosamente :D !");
-        //     this.dialogRef.close();
-        //     //this.router.navigate([''])
-
-        //   },
-        //   error:(err) =>{
-        //     this.showSnackBar(err.error.message);
-        //   }
-        // })
+        
         const request: Observable<any> = this.id
           ? this.sservice.updateService(this.id, serviceData)
           : this.sservice.crearServicioCarer(serviceData);

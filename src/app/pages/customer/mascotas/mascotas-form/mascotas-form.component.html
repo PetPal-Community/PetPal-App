@@ -1,0 +1,63 @@
+<h2 mat-dialog-title>Añadir mascota</h2>
+<mat-dialog-content>
+    <form [formGroup]="mascotaForm" (ngSubmit)="onSubmit()">
+        <p></p>
+        <!-- Campo: Nombre de la mascota -->
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre de la mascota:</mat-label>
+            <input matInput formControlName="nombre" />
+            @if (controlHasError('nombre', 'required')) {<mat-error >
+                Este campo es obligatorio
+            </mat-error>}
+        </mat-form-field>
+
+        <!-- Campo: Raza -->
+        <mat-form-field appearance="outline">
+            <mat-label>Raza:</mat-label>
+            <input matInput formControlName="raza" />
+            @if (controlHasError('raza', 'required')) {<mat-error >
+                Este campo es obligatorio
+            </mat-error>}
+        </mat-form-field>
+
+        <!-- Campo: Edad -->
+        <mat-form-field appearance="outline">
+            <mat-label>Edad:</mat-label>
+            <input matInput formControlName="edad" />
+            @if (controlHasError('edad', 'required')) {<mat-error >
+                Este campo es obligatorio
+            </mat-error>}
+        </mat-form-field>
+
+        <!-- Campo: Género -->
+        <div>
+            <mat-label>Género:</mat-label>
+            <mat-radio-group formControlName="genero">
+                <mat-radio-button value="macho">Masculino</mat-radio-button>
+                <mat-radio-button value="hembra">Femenino</mat-radio-button>
+            </mat-radio-group>
+            @if (controlHasError('genero', 'required')) {<mat-error >
+                Este campo es obligatorio
+            </mat-error>}
+        </div>
+
+        <!-- Campo: Tipo de mascota -->
+        <mat-form-field appearance="outline">
+            <mat-label>Tipo de mascota:</mat-label>
+            <mat-select formControlName="especie">
+                @for(especie of especies; track $index)
+                {<mat-option  [value]="especie.value">
+                    {{ especie.viewValue }}
+                </mat-option>}
+            </mat-select>
+            @if (controlHasError('especie', 'required')) {<mat-error >
+                Este campo es obligatorio
+            </mat-error>}
+        </mat-form-field>
+
+        <mat-dialog-actions appearance="outline">
+            <button mat-button mat-dialog-close>Cancelar</button>
+            <button mat-button type="submit" [disabled]="mascotaForm.invalid">Añadir mascota</button>
+        </mat-dialog-actions>
+    </form>
+</mat-dialog-content>

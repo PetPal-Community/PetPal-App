@@ -15,7 +15,7 @@ import { MediaService } from '../../../core/services/media.service';
   selector: 'app-update-profile',
   standalone: true,
   imports: [FormsModule, ReactiveFormsModule, MatButtonModule,
-    MatInputModule, MatCardModule, MatSnackBarModule, RouterLink, CommonModule],
+    MatInputModule, MatCardModule, MatSnackBarModule, CommonModule],
   templateUrl: './update-profile.component.html',
   styleUrl: './update-profile.component.css'
 })

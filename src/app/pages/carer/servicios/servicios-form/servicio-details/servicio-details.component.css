@@ -28,12 +28,47 @@
   .contratar-button {
     display: block;
     margin: 20px auto;  /* Centrar el botón */
-    background-color: red;  /* Color de fondo rojo */
+    background-color: orange;  /* Color de fondo rojo */
     color: white;  /* Texto en blanco */
     padding: 10px 20px;
     border-radius: 4px;  /* Bordes redondeados opcionales */
+    
   }
   
   .contratar-button:hover {
-    background-color: darkred;  /* Efecto de hover en el botón */
+    background-color: wheat;  /* Efecto de hover en el botón */
   }
+
+  /* Contenedor de botones (editar, eliminar, y aceptar) */
+.action-buttons {
+  display: flex;
+  justify-content: center;  /* Centra los botones horizontalmente */
+  gap: 20px;                /* Espacio entre los botones */
+  margin-bottom: 20px;      /* Espacio entre los botones y el botón de aceptar */
+  width: 100%;              /* Asegura que el contenedor ocupe todo el ancho disponible */
+  text-align: center;       /* Centra los botones de texto */
+}
+
+/* Estilos para los botones de editar y eliminar */
+.eliminar-button {
+  font-size: 14px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  padding: 8px 16px;
+  text-transform: none;
+}
+
+.editar-button {
+  font-size: 14px;
+  background-color: #eef1ed;
+  color: #268a05;
+  border-radius: 4px;
+  padding: 8px 16px;
+  text-transform: none;
+}
+
+.editar-button:hover {
+  
+  background-color: #c6eeb9;
+  
+}

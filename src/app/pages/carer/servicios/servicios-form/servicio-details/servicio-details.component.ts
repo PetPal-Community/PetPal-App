@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { ServicioService } from '../../../../../core/services/servicio.service';
 import { ServicioResponse } from '../../../../../shared/models/servicios-response.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ApiImgPipe } from '../../../../../core/pipes/api-img.pipe';
+import { ServicioDialogComponent } from '../servicio-dialog/servicio-dialog.component';
 
 @Component({
   selector: 'app-servicio-details',
@@ -20,6 +21,8 @@ export class ServicioDetailsComponent {
   serviceId?: number
   private sservice = inject(ServicioService);
   private snackBar = inject(MatSnackBar);
+  readonly dialog = inject(MatDialog);
+  private servicioService = inject(ServicioService);
   servicio: ServicioResponse = {} as ServicioResponse;
   
   ngOnInit(): void{
@@ -42,6 +45,29 @@ export class ServicioDetailsComponent {
     this.snackBar.open(message, 'Close', {
       duration: 2000,
       verticalPosition: 'top'
+    })
+  }
+
+  cerrar(): void{
+    this.dialogRef.close()
+  }
+
+  editar(servicioId: number): void {
+    const dialogRef = this.dialog.open(ServicioDialogComponent, {
+      data: { id: servicioId }  // Asegúrate de pasar un objeto con el servicioId
+    });
+  }
+
+
+  eliminar(servicioId: number): void{
+    this.servicioService.deleteService(servicioId).subscribe({
+      next:()=>{
+        this.dialogRef.close();
+        window.location.reload();
+      },
+      error:(e)=>{
+        console.log("Error" + e)
+      }
     })
   }
 

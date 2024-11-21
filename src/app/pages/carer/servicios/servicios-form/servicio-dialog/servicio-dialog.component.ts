@@ -137,8 +137,7 @@ export class ServicioDialogComponent {
           next: () => {
             this.showSnackBar("Servicio guardado exitosamente");
             this.dialogRef.close();
-            // Descomenta si deseas redirigir a otra página
-            // this.router.navigate(['/ruta/deseada']);
+            window.location.reload();
           },
           error: (err) => {
             this.showSnackBar(err.error.message || "Error al guardar el servicio");

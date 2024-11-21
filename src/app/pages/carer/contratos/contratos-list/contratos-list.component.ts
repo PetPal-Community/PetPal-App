@@ -43,5 +43,19 @@ export class ContratosListComponent implements OnInit {
   crearPago(contratoId:number): void{
     this.dialog.open(PagosComponent, {data: contratoId})
   }
+
+  rechazar(contratoId:number): void{
+    this.contratoService.actualizarEstadoContrato(contratoId,"Anulado").subscribe();
+  }
+
+  iniciarContrato(contratoId:number): void{
+    this.contratoService.actualizarEstadoContrato(contratoId,"En proceso").subscribe();
+    window.location.reload()
+  }
+
+  finContrato(contratoId:number): void{
+    this.contratoService.actualizarEstadoContrato(contratoId,"Finalizado").subscribe();
+    window.location.reload()
+  }
   
 }

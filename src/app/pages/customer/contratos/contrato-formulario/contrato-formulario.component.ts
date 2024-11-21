@@ -25,6 +25,7 @@ export class ContratoFormularioComponent {
   contratoForm: FormGroup;
   private cf = inject(FormBuilder);
   private route=inject(ActivatedRoute);
+  private router = inject(Router);
   private authService = inject(AuthService);
   private contratoService = inject(ContratoService);
   private snackBar = inject(MatSnackBar);
@@ -62,7 +63,9 @@ export class ContratoFormularioComponent {
         contratoData.estado = "Sin confirmar"
         this.contratoService.crearContrato(contratoData).subscribe({
           next: (r)=>{
+            
             this.showSnackBar("Contrato creado")
+            this.router.navigate(["/customer/verContratos"])
           },
           error: (e) =>{
             this.showSnackBar(e.error.message || "error en crear contrato");

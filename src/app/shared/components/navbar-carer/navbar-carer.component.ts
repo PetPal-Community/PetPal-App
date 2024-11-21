@@ -45,6 +45,10 @@ export class NavbarCarerComponent {
     this.router.navigate(['/carer/mensajes'])
   }
 
+  reporte(): void{
+    this.router.navigate(['/carer/reporte'])
+  }
+
 
 
 

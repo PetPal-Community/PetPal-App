@@ -59,14 +59,7 @@ export class ServiciosListComponent implements OnInit{
     const dialogRef = this.dialog.open(ServicioDialogComponent); 
   }
 
-  editarServicio(servicioId: number): void {
-    const servicio = this.servicios.find(s => s.id === servicioId);  // Encuentra el servicio completo por ID
-    if (servicio) {
-      const dialogRef = this.dialog.open(ServicioDialogComponent, {
-        data: servicio  // Envía el servicio completo
-      });
-    }
-  }
+  
 
 
 }

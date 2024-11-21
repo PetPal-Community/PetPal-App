@@ -26,9 +26,14 @@
             <p>
                 {{contrato.detalles}}
             </p>
-            <p>
+            @if(contrato.pagoContrato){<p>
                 Precio final del contrato: S/. {{contrato.pagoContrato}}
-            </p>
+            </p>}
+            @if (contrato.pagoEstado) {
+                <p>
+                    Estado del pago: {{contrato.pagoEstado.toLowerCase()}}
+                </p>                       
+            }
             <div class="user">
                 @if(contrato.picRutaCuidador){<img [src]="contrato.picRutaCuidador | apiImg " alt="Imagen del perfil">}
                 @else {<img [src]="'no-profile-picture.png'" alt="No-imagen">}

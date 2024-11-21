@@ -6,21 +6,35 @@
 
     <div class="card">
         <div class="card-body">
-            <span class="tag" [ngClass]="{
-                        'tag-teal': contrato.estado === 'En proceso',
-                        'tag-purple': contrato.estado === 'Aceptado',
-                        'tag-pink': contrato.estado === 'Finalizado',
-                        'tag-red': contrato.estado === 'Anulado'
-            }">
-                {{ contrato.estado }}
-            </span>
+            <div class="tag-container">
+                <span class="tag" [ngClass]="{
+                            'tag-teal': contrato.estado === 'En proceso',
+                            'tag-purple': contrato.estado === 'Aceptado',
+                            'tag-pink': contrato.estado === 'Finalizado',
+                            'tag-red': contrato.estado === 'Anulado'
+                }">
+                    {{ contrato.estado }}
+                </span>
+                <!-- Enlace de editar al lado del tag -->
+                @if(contrato.estado === 'Aceptado' && contrato.pagoEstado != "PENDING"){<a class="editar-link tag tag-ini " (click)="iniciarContrato(contrato.id)">Iniciar contrato</a>}
+                @else if (contrato.estado === 'En proceso') {<a class="editar-link tag tag-fin" (click)="finContrato(contrato.id)">Fin contrato</a>}
+            </div>
+
             <h4>{{contrato.servicioTipoServicio}}</h4>
             <p>
                 {{contrato.detalles}}
             </p>
             <p>
-                Precio final del contrato: S/. {{contrato.pagoContrato}}
+                Precio del servicio: S/. {{contrato.servicioPrecio}}
             </p>
+            @if(contrato.pagoContrato){<p>
+                Precio final del contrato: S/. {{contrato.pagoContrato}}
+            </p>}
+            @if (contrato.pagoEstado) {
+                <p>
+                    Estado del pago: {{contrato.pagoEstado.toLowerCase()}}
+                </p>                       
+            }
             <div class="user">
                 @if(contrato.picRutaUsuario){<img [src]="contrato.picRutaUsuario | apiImg " alt="Imagen del perfil" >} @else {<img [src]="'no-profile-picture.png'" alt="No-imagen">}
                 <div class="user-info">
@@ -30,7 +44,7 @@
             </div>
             @if(contrato.estado==='Sin confirmar'){
                <div class="tag-container">
-                <a class="tagge no-aceptar" href="">Rechazar</a>
+                <a class="tagge no-aceptar" (click)="rechazar(contrato.id)">Rechazar</a>
              
                 <a class="tagge aceptar"  (click)="crearPago(contrato.id)">
                     Aceptar

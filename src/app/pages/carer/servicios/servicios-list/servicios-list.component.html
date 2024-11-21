@@ -5,10 +5,10 @@
 <section class="contenedor" >
     @for(servicio of servicios; track servicio;  let idx = $index) {
     <div class="card">
-        @if(servicio.picRuta){<img class= "image" [src]="servicio.picRuta | apiImg " alt="Imagen del servicio" >} @else {<img class="image" [src]="'no-image.png'" alt="No-imagen servicio">}
+        @if(servicio.picRuta){<img class= "image" [src]="servicio.picRuta | apiImg " alt="Imagen del servicio" >} @else {<img class="image" [src]="'../../../../assets/img/no-image.png'" alt="No-imagen servicio">}
         <div class="text"  [ngClass]="{'gradient1': idx % 2 === 0, 'gradient2': idx % 2 !== 0}"></div>
         <div class="img-persona">
-            @if(servicio.picRutaCuidador){<img [src]="servicio.picRutaCuidador | apiImg " alt="Imagen del perfil" >} @else {<img [src]="'no-profile-picture.png'" alt="No-imagen">}
+            @if(servicio.picRutaCuidador){<img [src]="servicio.picRutaCuidador | apiImg " alt="Imagen del perfil" >} @else {<img [src]="'../../../../assets/img/no-profile-picture.png'" alt="No-imagen">}
         </div>
         <div class="main-text" >
             <p>{{servicio.tipo_servicio}}</p>

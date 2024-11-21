@@ -9,7 +9,7 @@
             <div class="card mb-3 petcard" style="max-width: 80%; margin: auto;">
                 <div class="row g-0">
                     <div class="col-md-3"> <!-- Imagen ocupa 3/12 del ancho total -->
-                        <img [src]="'mascotas/' + mascota.especie.toLocaleLowerCase() + '.png'" class="img-fluid rounded-start"
+                        <img [src]="'assets/mascota' + mascota.especie.toLocaleLowerCase() + '.png'" class="img-fluid rounded-start"
                             alt="{{ mascota.especie.toLocaleLowerCase() }}" />
                     </div>
                     <div class="col-md-9 d-flex flex-column justify-content-between">

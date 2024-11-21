@@ -15,8 +15,8 @@ import { ContratoService } from '../../../../core/services/contrato.service';
   selector: 'app-contrato-formulario',
   standalone: true,
   imports: [FormsModule, ReactiveFormsModule, MatButtonModule, MatInputModule, MatCardModule,
-    MatSnackBarModule, RouterLink,CommonModule, MatFormFieldModule,
-    MatRadioButton, MatRadioModule
+    MatSnackBarModule, CommonModule, MatFormFieldModule,
+     MatRadioModule
   ],
   templateUrl: './contrato-formulario.component.html',
   styleUrl: './contrato-formulario.component.css'

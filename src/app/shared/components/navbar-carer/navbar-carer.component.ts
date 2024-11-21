@@ -6,7 +6,7 @@ import { AuthService } from '../../../core/services/auth.service';
 @Component({
   selector: 'app-navbar-carer',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './navbar-carer.component.html',
   styleUrl: './navbar-carer.component.css'
 })

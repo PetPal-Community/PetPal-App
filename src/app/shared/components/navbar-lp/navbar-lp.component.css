@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Keania+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Keania+One&family=Lateef:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Keania+One&family=Lateef:wght@200;300;400;500;600;700;800&family=Ledger&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Keania+One&family=Lateef:wght@200;300;400;500;600;700;800&family=Ledger&family=Lemon&display=swap');
+@font-face {
+    font-family: 'KyivTypeTitling';
+    src: url(../../../../assets/css/fonts/kyiv-type-titling/KyivTypeTitling-Heavy.otf);
+}
+
+.contenedor {
+    
+    background-color: #BF812E;
+    margin: auto;
+    overflow: hidden;
+    background-image: url(../../../../assets/img/fondo.png); /* Asegúrate de que la ruta sea correcta */
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 600px;
+}
+
+/* Menú de navegación */
+.contenedor .menu {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    gap: 20px;
+}
+
+.contenedor .menu a {
+    text-align: left;
+    font-family: 'Keania One', sans-serif;
+    margin: 0 20px;
+    color: #fff;
+    padding-bottom: 9px;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    font-size: 1em; /* Corregí el error en la unidad */
+}
+
+.contenedor .menu a:hover {
+    border-bottom: 2px solid #fff; /* Añadí el espacio entre `solid` y el color */
+}
+
+.contenedor .menu .btn {
+    text-align: right;
+    background-color: #D9D0C1;
+    font-family: 'Keania One', sans-serif;
+    color: #401F0D;
+    padding: 15px 20px;
+    text-decoration: none;
+    margin-left: auto;
+}
+
+/* Contenedor de texto */
+.contenedor .contenedor-text {
+    display: flex;
+    justify-content: center;
+    margin: 200px 0;
+}
+
+.contenedor .contenedor-text .texto {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    display: inline-block;
+    text-align: center;
+    padding: 20px 60px;
+}
+
+/* Estilos del texto */
+.contenedor .contenedor-text h1, 
+.contenedor .contenedor-text h2 {
+    color: #fff;
+    font-family: 'Lateef', sans-serif;
+    margin: 0px;
+}
+
+.contenedor .contenedor-text .texto .AppName {
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 50px;
+    margin-bottom: 15px;
+    letter-spacing: 15px;
+}
+
+.contenedor .contenedor-text .texto .AppName-Community {
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 30px;
+}

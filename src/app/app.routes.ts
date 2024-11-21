@@ -20,6 +20,10 @@ export const routes: Routes = [
     {
         path:'carer', loadChildren:() => import('./pages/carer/carer.routes').then(ca => ca.carerRoutes),
         canActivate: [authGuard]
+    },
+
+    {
+        path:'home', loadChildren:() => import('./pages/home/home.routes').then(lp =>lp.homeRoutes )
     }
 
 ];

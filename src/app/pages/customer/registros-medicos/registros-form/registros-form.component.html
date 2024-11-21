@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>Crear Visita Medico</h2>
+<mat-dialog-content>
+    <form [formGroup]="visitaForm" (ngSubmit)="onSubmit()">
+        <p></p>
+        <!-- Campo: Nombre de la mascota -->
+        <mat-form-field appearance="outline">
+            <mat-label>Motivo de visita:</mat-label>
+            <input matInput formControlName="diagnostico" />
+            @if (controlHasError('nombre', 'required')) {<mat-error >
+                Este campo es obligatorio
+            </mat-error>}
+        </mat-form-field>
+
+        <!-- Campo: Raza -->
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Fecha de visita:</mat-label>
+            <input matInput formControlName="fechaVisita" type="date" />
+            <mat-error *ngIf="controlHasError('fechaVisita', 'required')">
+              Este campo es obligatorio
+            </mat-error>
+          </mat-form-field>
+    
+        <!-- Campo: Tipo de mascota -->
+        <mat-form-field appearance="outline">
+            <mat-label>Seleccione a que mascota:</mat-label>
+            <mat-select formControlName="mascotaId">
+                @for(mascota of mascotas; track $index)
+                {<mat-option  [value]="mascota.id">
+                    {{ mascota.nombre }}
+                </mat-option>}
+            </mat-select>
+            @if (controlHasError('especie', 'required')) {<mat-error >
+                Este campo es obligatorio
+            </mat-error>}
+        </mat-form-field>
+
+        <mat-dialog-actions appearance="outline">
+            <button mat-button mat-dialog-close>Cancelar</button>
+            <button mat-button type="submit" [disabled]="visitaForm.invalid">Crear Visita</button>
+        </mat-dialog-actions>
+    </form>
+</mat-dialog-content>

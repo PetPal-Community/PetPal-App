@@ -1,20 +1,20 @@
 /* Estilo para el contenedor principal */
 .registrosmedicos-container {
     display: flex;
-    flex-direction: column;
-    /* Organiza los elementos en columna */
-    align-items: center;
-    /* Centra los elementos horizontalmente */
-    height: 80vh;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+   
+    height: 100vh; /* Asegura que el contenedor ocupe el 100% de la altura de la ventana */
+    width: 100vw; /* Asegura que el contenedor ocupe el 100% del ancho de la ventana */
     padding: 20px;
-    background-color: #f0f0f0;
-    /* Fondo claro */
+    background-color: #f0f0f0; /* Fondo claro */
+    overflow: auto; /* Permite hacer scroll si el contenido excede el tamaño de la ventana */
+    box-sizing: border-box; /* Asegura que el padding no exceda el ancho/alto */
 }
 
 /* Estilo para el título */
 .titulo h2 {
-    margin-bottom: 20px;
-    /* Espacio entre el título y la caja */
+    margin-bottom: 20px; /* Espacio entre el título y la caja */
     color: #333;
     font-family: Arial, sans-serif;
     text-align: center;
@@ -22,17 +22,17 @@
 
 /* Estilo para la caja con bordes redondeados */
 .registrosmedicos-subox {
-    background-color: white;
+    background-color: #D9A273;
     padding: 20px;
-    border-radius: 15px;
-    /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra para profundidad */
-    width: 90%;
-    /* Ancho fijo */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    max-width: 1200px; /* Ancho máximo */
     text-align: center;
     font-family: Arial, sans-serif;
     position: relative;
+    overflow-y: auto; /* Agrega un scroll si el contenido excede el espacio */
+    box-sizing: border-box;
 }
 
 /* Estilo para el contenido dentro de la caja */
@@ -48,17 +48,44 @@
 /* Estilo para el enlace */
 .link {
     position: absolute;
-    bottom: 10px;
-    /* Ubica el enlace en la parte inferior */
-    right: 10px;
-    /* Ubica el enlace en la parte derecha */
-    color: #007bff;
-    /* Color azul */
+    bottom: 10px; /* Ubica el enlace en la parte inferior */
+    right: 10px; /* Ubica el enlace en la parte derecha */
+    color: #007bff; /* Color azul */
     text-decoration: none;
     font-size: 50px;
 }
 
 .link:hover {
-    text-decoration: underline;
-    /* Efecto hover */
+    text-decoration: underline; /* Efecto hover */
+}
+
+@font-face {
+    font-family: 'KyivTypeTitling';
+    src: url(../../../../../assets/css/fonts/kyiv-type-titling/KyivTypeTitling-Heavy.otf);
+}
+
+.petcard .col-md-3 img {
+    height: 100%; /* Para que ocupe todo el alto del contenedor */
+    object-fit: cover; /* Para que se recorte sin distorsionarse */
+}
+
+.petcard {
+    background-color: rgba(217, 217, 217, 0.6);
+}
+
+.petcard h5 {
+    font-family: 'KyivTypeTitling', sans-serif;
+    color: rgba(115, 66, 38, 0.9);
+}
+
+.card-footer a {
+    margin-right: 5px; /* Aplica un margen de 5px entre los enlaces */
+    padding: 5px; /* (Opcional) agrega un poco de padding para mejorar la apariencia */
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    color: #000; /* (Opcional) cambia el color del texto */
+}
+
+.card-footer a:hover {
+    color: #007bff; /* Cambia el color al pasar el mouse sobre el enlace */
+    text-decoration: underline; /* Opcional: agrega subrayado al pasar el mouse */
 }

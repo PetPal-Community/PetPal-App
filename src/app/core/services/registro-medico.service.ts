@@ -9,7 +9,7 @@ import { VisitaRequest } from '../../shared/models/visitaMedica-request.model';
   providedIn: 'root'
 })
 export class RegistroMedicoService {
-  private baseURL = `${environment.baseUrl}/medicVisit`;
+  private baseURL = `${environment.baseUrl}/medicvisit`;
   private http = inject(HttpClient);
 
   getTodasVisitasMedicas(): Observable<VisitaResponse>{
@@ -32,6 +32,9 @@ export class RegistroMedicoService {
     return this.http.delete<void>(`${this.baseURL}/${visitaId}`);
   }
 
+  getVisitaByUserId(userId: number): Observable<VisitaResponse[]>{
+    return this.http.get<VisitaResponse[]>(`${this.baseURL}/user/${userId}`);
+  }
 
 }
 

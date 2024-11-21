@@ -1,0 +1,54 @@
+.registrosmedicos-container {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo suave */
+    box-sizing: border-box; /* Asegura que el padding no sobresalga */
+    width: 100%;
+}
+
+mat-form-field {
+    width: 100%; /* Hace que los campos ocupen todo el ancho disponible */
+    margin-bottom: 15px; /* Espaciado entre los campos */
+}
+
+mat-form-field mat-label {
+    font-weight: 500; /* Etiquetas con mayor peso */
+    font-size: 16px;
+    margin-bottom: 8px; /* Espacio debajo de las etiquetas */
+}
+
+mat-input, mat-select {
+    font-size: 14px; /* Tamaño de texto de los inputs */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+mat-form-field .mat-form-field-flex {
+    padding: 5px; /* Agrega padding dentro del campo de entrada */
+}
+
+mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end; /* Botones alineados a la derecha */
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 20px; /* Separación con el resto del formulario */
+}
+
+button {
+    padding: 10px 20px; /* Tamaño de los botones */
+    font-size: 14px;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+button:disabled {
+    background-color: #ccc; /* Color de fondo cuando el botón está deshabilitado */
+    color: #666; /* Color de texto cuando está deshabilitado */
+}
+
+mat-error {
+    color: #f44336; /* Color rojo para los mensajes de error */
+    font-size: 12px;
+    margin-top: 5px; /* Espacio entre el error y el campo */
+}

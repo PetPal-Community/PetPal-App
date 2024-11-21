@@ -1,13 +1,38 @@
-<section class="registrosmedicos-container">
+<div class="registrosmedicos-container">
     <div class="Titulo">
         <h2>Registros Médicos</h2>
     </div>
 
     <div class="registrosmedicos-subox">
-      <h2>Contenido de la caja</h2>
-      <p>Este es un ejemplo de una caja con bordes redondeados dentro de un container.</p>
+      <div class="registros-cards">
+        @for (registro of registros; track registro.id) {
+        <div class="card mb-3 petcard" style="max-width: 80%; margin: auto;">
+            <div class="row g-0">
+                <div class="col-md-3"> <!-- Imagen ocupa 3/12 del ancho total -->
+                  <i class="fa-solid fa-user-doctor" style="color: #ffffff; font-size: 200px;"></i>
+                </div>
+                <div class="col-md-9 d-flex flex-column justify-content-between">
+                    <!-- Contenido ocupa 9/12 del ancho -->
+                    <div class="card-body">
+                        <h5 class="card-title">{{ registro.diagnostico }} - ( {{registro.fechaVisita}})</h5>
+                        <p class="card-text" > {{ registro.nombreMascota}}</p>
+                      
+                    </div>
+                    <div class="card-footer w-100 text-end">
+                        <a (click)="verTratamientos()">Tratamientos</a>
+                        <a (click)="verDocumentos()">Documentos</a>
+                        <a (click)="borrar(registro.id)"><i class="fa-solid fa-trash" style="color: #b2450a;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        } @empty {
+        <p>No registros medicos agregados. 😔</p>
+        }
+
+    </div>
 
       <!-- Esquina inferior -->
-      <a href="#" class="link"><i class="fa-solid fa-circle-plus" style="color: #231f20;"></i></a> 
+      <a class="link" (click)="crearRegistro()"><i class="fa-solid fa-circle-plus" style="color: #231f20;"></i></a> 
     </div>
-  </section>
+  </div>

@@ -2,7 +2,7 @@ import { Routes } from "@angular/router";
 import { CustomerLayoutComponent } from "./customer-layout/customer-layout.component";
 import { PanelControlComponent } from "./panel-control/panel-control.component";
 import { RecordatoriosComponent } from "./recordatorios/recordatorios.component";
-import { RegistrosMedicosComponent } from "./registros-medicos/registros-medicos.component";
+import { RegistrosMedicosComponent } from "./registros-medicos/registros-list/registros-medicos.component";
 import { UserProfileComponent } from "../../shared/components/user-profile/user-profile.component";
 import { UpdateProfileComponent } from "../../shared/components/update-profile/update-profile.component";
 import { BuscarServiciosComponent } from "./buscar-servicios/servicios-list/buscar-servicios.component";

@@ -28,6 +28,7 @@ export class MascotasListComponent implements OnInit{
   private authService = inject(AuthService);
   private snackBar = inject(MatSnackBar);
   readonly dialog = inject(MatDialog);
+  
 
   ngOnInit(): void {
       this.cargarPets();

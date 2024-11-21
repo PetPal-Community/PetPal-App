@@ -11,7 +11,7 @@ import { ContactosEmerComponent } from "./contactos-emer/contactos-emer.componen
 import { MascotasListComponent } from "./mascotas/mascotas-list/mascotas-list.component";
 import { ContratoFormularioComponent } from "./contratos/contrato-formulario/contrato-formulario.component";
 import { ContratosListCustomerComponent } from "./contratos/contratos-list/contratos-list.component";
-import { CalendarioComponent } from "./recordatorios/calendario/calendario.component";
+// import { CalendarioComponent } from "./recordatorios/calendario/calendario.component";
 import { ConfirmacionCompraComponent } from "./contratos/confirmacion-compra/confirmacion-compra.component";
 
 export const customerRoutes: Routes =[{
@@ -20,7 +20,7 @@ export const customerRoutes: Routes =[{
     children: [
         { path: 'mascotas', component: MascotasListComponent},
         { path: 'panelControl', component:PanelControlComponent},
-        { path: 'recordatorios', component: CalendarioComponent},
+        // { path: 'recordatorios', component: CalendarioComponent},
         { path: 'registrosMedicos', component: RegistrosMedicosComponent},
         { path: 'profile', component: UserProfileComponent},
         { path: 'buscarServicios', component: BuscarServiciosComponent},

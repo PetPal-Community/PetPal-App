@@ -1,0 +1,29 @@
+{
+  "routes": [
+    "/auth",
+    "/auth/login",
+    "/auth/register",
+    "/carer",
+    "/carer/contratos",
+    "/carer/mensajes",
+    "/carer/profile",
+    "/carer/profile/update",
+    "/carer/reporte",
+    "/carer/reviews",
+    "/carer/servicios",
+    "/carer/servicios/crear",
+    "/carer/servicios/update",
+    "/customer",
+    "/customer/buscarServicios",
+    "/customer/contactosEmergencia",
+    "/customer/mascotas",
+    "/customer/mensajes",
+    "/customer/panelControl",
+    "/customer/profile",
+    "/customer/profile/update",
+    "/customer/registrosMedicos",
+    "/customer/verContratos",
+    "/home",
+    "/home/nuestrosContactos"
+  ]
+}

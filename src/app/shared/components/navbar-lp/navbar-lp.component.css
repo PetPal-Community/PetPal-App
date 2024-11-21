@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Keania+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Keania+One&family=Lateef:wght@200;300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Keania+One&family=Lateef:wght@200;300;400;500;600;700;800&family=Ledger&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Keania+One&family=Lateef:wght@200;300;400;500;600;700;800&family=Ledger&family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Keania+One&family=Lateef:wght@400;800&display=swap');
 @font-face {
     font-family: 'KyivTypeTitling';
     src: url(../../../../assets/css/fonts/kyiv-type-titling/KyivTypeTitling-Heavy.otf);
@@ -70,7 +67,7 @@
 .contenedor .contenedor-text h1, 
 .contenedor .contenedor-text h2 {
     color: #fff;
-    font-family: 'Lateef', sans-serif;
+    font-family: 'Keania One', sans-serif;
     margin: 0px;
 }
 

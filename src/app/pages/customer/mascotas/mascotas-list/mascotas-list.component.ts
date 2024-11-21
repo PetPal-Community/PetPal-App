@@ -72,7 +72,14 @@ export class MascotasListComponent implements OnInit{
   }
 
   borrarMascota(mascotaId:number): void{
-    
+    this.mascotaService.deleteMascota(mascotaId).subscribe({
+      next:()=>{
+        window.location.reload();
+      },
+      error:(e)=>{
+        console.log("Error en borrar mascota" + e)
+      }
+    })
   }
 
 

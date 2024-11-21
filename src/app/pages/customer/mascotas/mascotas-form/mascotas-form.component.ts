@@ -56,6 +56,16 @@ export class MascotasFormComponent {
     })
   }
 
+  ngOnInit(): void {
+    if (this.data) {
+      console.log('Servicio ID recibido en el diálogo:', this.data); // Verifica que el servicioId se reciba
+      this.id = this.data;
+      console.log('Servicio:', this.id);
+      this.cargarMascotaForEditar();
+    }
+  }
+
+
   onSubmit() {
     if (this.mascotaForm.valid) {
       const user = this.authService.getUser();
@@ -86,6 +96,18 @@ export class MascotasFormComponent {
       this.mascotaForm.markAllAsTouched();
       return;
     }
+  }
+
+  cargarMascotaForEditar(): void {
+    this.mascotaService.obtenerMascotaById(this.id!).subscribe({
+      next: (mascota: MascotaResponse) => {
+        this.mascotaForm.patchValue({ ...mascota });
+      }, error: (err) => {
+        this.showSnackBar('Error al cargar el servicio');
+      }
+      
+    })
+
   }
 
   controlHasError(control: string, error: string) {

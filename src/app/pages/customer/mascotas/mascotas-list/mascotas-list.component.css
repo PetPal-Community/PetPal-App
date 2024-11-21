@@ -82,13 +82,3 @@
 .card-footer a {
     font-size: 30px;
 }
-
-/* Ajustes de responsividad */
-@media (max-width: 768px) {
-    .mascotas-subox {
-        padding: 15px;
-    }
-    .petcard .col-md-3 img {
-        height: auto;
-    }
-}
